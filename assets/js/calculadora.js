@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PEPTIDIA — Calculadora de reconstitución
+   PEPTIDIA - Calculadora de reconstitución
    Entra: mg del vial, mL de agua, dosis deseada (mcg/mg), tipo de jeringa.
    Sale: UI (unidades de la jeringa de insulina U-100), mL a extraer,
          concentración y nº de dosis por vial, con jeringuilla SVG dinámica.
@@ -25,7 +25,7 @@
 
   /* ---- helpers ---- */
   function fmt(n, dec) {
-    if (!isFinite(n)) return '—';
+    if (!isFinite(n)) return '-';
     var r = Math.round(n * Math.pow(10, dec)) / Math.pow(10, dec);
     var s = (r % 1 === 0) ? String(r) : r.toFixed(dec).replace(/0+$/, '').replace(/\.$/, '');
     return s.replace('.', ','); // decimal español
@@ -92,11 +92,11 @@
   }
 
   function clearResults(msg) {
-    els.num.textContent = '—';
-    els.volume.textContent = '—';
-    els.conc.textContent = '—';
+    els.num.textContent = '-';
+    els.volume.textContent = '-';
+    els.conc.textContent = '-';
     els.concMcg.textContent = '';
-    els.perVial.textContent = '—';
+    els.perVial.textContent = '-';
     els.hint.textContent = msg || 'Rellena los tres campos para ver el resultado.';
     els.error.classList.remove('is-visible');
     renderSyringe(parseInt(els.syringe.value, 10), 0);
