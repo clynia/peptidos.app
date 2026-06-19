@@ -10,9 +10,9 @@
 
   function policyHref() {
     var p = location.pathname;
-    if (p.indexOf('/paginas/') > -1) return 'privacidad.html';
-    if (p.indexOf('/articulos/') > -1 || p.indexOf('/herramientas/') > -1) return '../paginas/privacidad.html';
-    return 'paginas/privacidad.html';
+    if (p.indexOf('/paginas/') > -1) return 'privacidad';
+    if (p.indexOf('/articulos/') > -1 || p.indexOf('/herramientas/') > -1) return '../paginas/privacidad';
+    return 'paginas/privacidad';
   }
 
   var el = document.createElement('div');

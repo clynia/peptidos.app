@@ -1,0 +1,11 @@
+# URLs limpias (sin .html) para servidores Apache (p. ej. Hostinger)
+RewriteEngine On
+
+# Redirige cualquier /pagina.html a /pagina
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Sirve /pagina desde /pagina.html cuando existe
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]

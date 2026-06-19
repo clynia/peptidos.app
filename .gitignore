@@ -6,3 +6,6 @@ _research/
 Thumbs.db
 desktop.ini
 *.log
+
+# Bitácora interna del proyecto (no se publica)
+ANCHOR.md

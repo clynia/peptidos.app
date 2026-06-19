@@ -33,7 +33,7 @@
   <header class="nav" aria-label="Principal">
     <input type="checkbox" id="navToggle" class="nav__check visually-hidden" />
     <div class="nav__inner">
-      <a class="brand" href="index.html" aria-label="peptidos.app, inicio">
+      <a class="brand" href="/" aria-label="peptidos.app, inicio">
         <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
           <path d="M6 23 L13 17.5 L19.5 19.5 L26 9.5" fill="none" stroke="#163E97" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
           <circle cx="6" cy="23" r="3.1" fill="#F6F8FC" stroke="#1B50C4" stroke-width="2"/>
@@ -45,11 +45,11 @@
         <span class="brand__name">peptidos<b>.app</b></span>
       </a>
       <nav class="nav__links">
-        <a href="index.html">Inicio</a>
-        <a href="index.html#peptidos">Péptidos</a>
-        <a href="paginas/que-son-los-peptidos.html">¿Qué son?</a>
-        <a href="herramientas/calculadora-reconstitucion.html">Calculadora</a>
-        <a href="paginas/seguridad-legalidad.html">Seguridad</a>
+        <a href="/">Inicio</a>
+        <a href="/#peptidos">Péptidos</a>
+        <a href="paginas/que-son-los-peptidos">¿Qué son?</a>
+        <a href="herramientas/calculadora-reconstitucion">Calculadora</a>
+        <a href="paginas/seguridad-legalidad">Seguridad</a>
       </nav>
       <label for="navToggle" class="btn btn--ghost nav__toggle" aria-label="Abrir menú">Menú</label>
     </div>
@@ -57,33 +57,38 @@
 
   <main>
     <!-- HERO -->
-    <section class="hero container">
+    <section class="hero">
       <div class="hero__halo" aria-hidden="true"></div>
-      <h1>Péptidos, explicados para personas normales</h1>
-      <p class="lede">Qué son, para qué sirven de verdad y dónde está el truco. Cada afirmación con su fuente fiable, los pros y los contras sin maquillar, y una calculadora que ilustra cómo se calcula una reconstitución. Cero bata blanca, cero promesas mágicas.</p>
-      <div class="hero__cta">
-        <a class="btn btn--lg" href="#peptidos">Explora los péptidos</a>
-      </div>
-      <p class="muted mt-3" style="font-size:.9rem">Citamos fuentes como PubMed, ClinicalTrials.gov, FDA, EMA y Cochrane. Si un dato no tiene respaldo, lo decimos.</p>
+      <div class="container hero__grid">
+        <div class="hero__main">
+          <h1>Péptidos, explicados para personas normales</h1>
+          <p class="lede">Qué son, para qué sirven de verdad y dónde está el truco. Cada afirmación con su fuente fiable, los pros y los contras sin maquillar, y una calculadora que ilustra cómo se calcula una reconstitución. Cero bata blanca, cero promesas mágicas.</p>
+          <div class="hero__cta">
+            <a class="btn btn--lg" href="#peptidos">Explora los péptidos</a>
+          </div>
+          <p class="muted mt-3" style="font-size:.9rem">Citamos fuentes como PubMed, ClinicalTrials.gov, FDA, EMA y Cochrane. Si un dato no tiene respaldo, lo decimos.</p>
+        </div>
 
-      <a class="toolcard" href="herramientas/calculadora-reconstitucion.html" style="margin-top:1.7rem" aria-label="Abrir la calculadora de reconstitución">
-        <span class="toolcard__icon">
-          <svg viewBox="0 0 80 36" fill="none" aria-hidden="true">
-            <line x1="6" y1="18" x2="20" y2="18" stroke="#9aa49d" stroke-width="2" stroke-linecap="round"/>
-            <rect x="20" y="9" width="44" height="18" rx="3" fill="#fff" stroke="#243A5E" stroke-width="1.4"/>
-            <rect x="21" y="10.5" width="13" height="15" fill="#6AA0FF" opacity=".55"/>
-            <rect x="33" y="8.5" width="2.6" height="19" rx="1" fill="#163E97"/>
-            <rect x="64" y="14.5" width="12" height="7" rx="2" fill="#cdd4cd"/>
-            <rect x="76" y="7" width="3" height="22" rx="1.5" fill="#9aa49d"/>
-          </svg>
-        </span>
-        <span class="toolcard__body">
-          <span class="toolcard__kicker">Herramienta</span>
-          <span class="toolcard__title">Calculadora de reconstitución</span>
-          <span class="toolcard__sub">Mete los mg del vial y el agua, y te decimos las UI con dibujo de la jeringuilla.</span>
-        </span>
-        <span class="toolcard__cta">Abrir <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
+        <a class="toolpanel" href="herramientas/calculadora-reconstitucion" aria-label="Abrir la calculadora de reconstitución">
+          <div class="toolpanel__art">
+            <svg viewBox="0 0 200 60" fill="none" aria-hidden="true">
+              <line x1="10" y1="30" x2="40" y2="30" stroke="#9aa49d" stroke-width="3" stroke-linecap="round"/>
+              <path d="M5 30 L14 27 L14 33 Z" fill="#9aa49d"/>
+              <rect x="40" y="16" width="120" height="28" rx="5" fill="#fff" stroke="#243A5E" stroke-width="2"/>
+              <rect x="42" y="18" width="38" height="24" fill="#6AA0FF" opacity=".5"/>
+              <rect x="78" y="14" width="4" height="32" rx="1.5" fill="#163E97"/>
+              <rect x="160" y="24" width="24" height="12" rx="3" fill="#cdd4cd"/>
+              <rect x="184" y="10" width="5" height="40" rx="2.5" fill="#9aa49d"/>
+              <line x1="61" y1="8" x2="61" y2="54" stroke="#E0512A" stroke-width="1.6" stroke-dasharray="3 3"/>
+              <g transform="translate(61,3)"><rect x="-16" y="-1" width="32" height="14" rx="7" fill="#E0512A"/><text x="0" y="9.5" font-size="8" font-weight="700" font-family="Inter,sans-serif" fill="#fff" text-anchor="middle">5 UI</text></g>
+            </svg>
+          </div>
+          <span class="toolpanel__kicker">Herramienta</span>
+          <span class="toolpanel__title">Calculadora de reconstitución</span>
+          <span class="toolpanel__sub">Mete los mg del vial y el agua, y te decimos las UI con dibujo de la jeringuilla.</span>
+          <span class="btn btn--accent toolpanel__btn">Abrir la calculadora</span>
+        </a>
+      </div>
     </section>
 
     <!-- QUÉ SON -->
@@ -95,7 +100,7 @@
             <p>Una proteína es un collar largo de piezas llamadas aminoácidos. Un péptido es ese mismo collar, pero cortito. Tu cuerpo fabrica cientos de péptidos para dar órdenes: repara esto, quema aquello, duerme ya. Los péptidos "de moda" son copias de laboratorio de esas órdenes, pensadas para empujar un proceso concreto.</p>
             <p>Eso explica el entusiasmo y también la cautela. Algunos tienen ensayos en personas y hasta aprobación como medicamento. Otros solo se han probado en ratones. En peptidos.app te decimos en cuál de esos dos mundos está cada uno, siempre.</p>
           </div>
-          <a class="btn mt-3" href="paginas/que-son-los-peptidos.html">La guía para principiantes</a>
+          <a class="btn mt-3" href="paginas/que-son-los-peptidos">La guía para principiantes</a>
         </div>
         <div class="grid" style="gap:1rem">
           <div class="card ev-card ev-card--strong"><div class="ev-card__meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></div><p class="card__kicker">Evidencia fuerte</p><p class="card__title">Ensayos en humanos</p><p class="card__desc">Probados en personas, a veces ya aprobados como fármaco. Aquí hablamos con más seguridad.</p></div>
@@ -109,87 +114,87 @@
     <section class="section" id="peptidos">
       <div class="container">
         <h2 class="center" style="margin-bottom:.6rem">Los péptidos que todo el mundo nombra</h2>
-        <p class="lede center measure" style="margin-inline:auto">Cada ficha cuenta lo bueno, lo malo y lo que aún no se sabe. Sin venderte nada.</p>
+        <p class="lede center measure" style="margin-inline:auto;text-align:center">Cada ficha cuenta lo bueno, lo malo y lo que aún no se sabe.<br>Sin venderte nada.</p>
 
         <div class="grid grid-3 mt-4">
-          <a class="card card--link" href="articulos/bpc-157.html">
+          <a class="card card--link" href="articulos/bpc-157">
             <p class="card__kicker">Recuperación</p>
             <p class="card__title">BPC-157</p>
             <p class="card__desc">El péptido "cúralo todo" del gimnasio: lo que de verdad dice la ciencia, y lo que todavía es solo cosa de ratones.</p>
             <div class="card__meta"><span class="badge badge--gold">Sobre todo en animales</span><span class="badge badge--ghost">No aprobado</span></div>
           </a>
 
-          <a class="card card--link" href="articulos/retatrutida.html">
+          <a class="card card--link" href="articulos/retatrutida">
             <p class="card__kicker">Pérdida de peso</p>
             <p class="card__title">Retatrutida</p>
             <p class="card__desc">El triple agonista que en los ensayos dejó atrás a Ozempic, con cifras de pérdida de peso nunca vistas en una inyección.</p>
             <div class="card__meta"><span class="badge">Ensayos en humanos</span><span class="badge badge--ghost">En investigación</span></div>
           </a>
 
-          <a class="card card--link" href="articulos/ghk-cu.html">
+          <a class="card card--link" href="articulos/ghk-cu">
             <p class="card__kicker">Piel y pelo</p>
             <p class="card__title">GHK-Cu</p>
             <p class="card__desc">El péptido de cobre que la cosmética seria lleva años usando, y por qué la piel parece tomárselo en serio.</p>
             <div class="card__meta"><span class="badge">Estudios en piel</span><span class="badge badge--ghost">Tópico permitido</span></div>
           </a>
 
-          <a class="card card--link" href="articulos/tb-500.html">
+          <a class="card card--link" href="articulos/tb-500">
             <p class="card__kicker">Recuperación</p>
             <p class="card__title">TB-500</p>
             <p class="card__desc">El primo de BPC-157 para la movilidad: mucha promesa en animales y pruebas en humanos todavía pendientes.</p>
             <div class="card__meta"><span class="badge badge--gold">Sobre todo en animales</span><span class="badge badge--ghost">No aprobado</span></div>
           </a>
 
-          <a class="card card--link" href="articulos/tirzepatida-vs-semaglutida.html">
+          <a class="card card--link" href="articulos/tirzepatida-vs-semaglutida">
             <p class="card__kicker">Pérdida de peso</p>
             <p class="card__title">Tirzepatida vs Semaglutida</p>
             <p class="card__desc">Mounjaro contra Ozempic: cuál adelgaza más según los estudios cara a cara, y qué le pasa a tu cuerpo con cada uno.</p>
             <div class="card__meta"><span class="badge">Aprobados (fármaco)</span><span class="badge badge--accent">Receta</span></div>
           </a>
 
-          <a class="card card--link" href="articulos/ipamorelina.html">
+          <a class="card card--link" href="articulos/ipamorelina">
             <p class="card__kicker">Sueño y recuperación</p>
             <p class="card__title">Ipamorelina</p>
             <p class="card__desc">La hormona de crecimiento "suave" que promete mejor sueño y recuperación sin los excesos de la GH clásica.</p>
             <div class="card__meta"><span class="badge badge--gold">Evidencia limitada</span><span class="badge badge--ghost">No aprobado</span></div>
           </a>
 
-          <a class="card card--link" href="articulos/cjc-1295.html">
+          <a class="card card--link" href="articulos/cjc-1295">
             <p class="card__kicker">Optimización GH</p>
             <p class="card__title">CJC-1295</p>
             <p class="card__desc">El stack que todo el mundo menciona junto a la ipamorelina: cómo funciona en realidad y por qué no es magia.</p>
             <div class="card__meta"><span class="badge badge--gold">Evidencia limitada</span><span class="badge badge--ghost">No aprobado</span></div>
           </a>
 
-          <a class="card card--link" href="articulos/mots-c.html">
+          <a class="card card--link" href="articulos/mots-c">
             <p class="card__kicker">Energía y metabolismo</p>
             <p class="card__title">MOTS-c</p>
             <p class="card__desc">El péptido mitocondrial que tu propio cuerpo fabrica al hacer ejercicio, y por qué interesa a quien busca energía.</p>
             <div class="card__meta"><span class="badge badge--gold">Sobre todo en animales</span><span class="badge badge--ghost">No aprobado</span></div>
           </a>
 
-          <a class="card card--link" href="articulos/epitalon.html">
+          <a class="card card--link" href="articulos/epitalon">
             <p class="card__kicker">Longevidad</p>
             <p class="card__title">Epitalon</p>
             <p class="card__desc">El péptido ruso de los telómeros: entre la promesa antienvejecimiento y una evidencia humana todavía escasa.</p>
             <div class="card__meta"><span class="badge badge--gold">Evidencia escasa</span><span class="badge badge--ghost">No aprobado</span></div>
           </a>
 
-          <a class="card card--link" href="articulos/pt-141.html">
+          <a class="card card--link" href="articulos/pt-141">
             <p class="card__kicker">Libido</p>
             <p class="card__title">PT-141</p>
             <p class="card__desc">El péptido del deseo: aprobado para la libido femenina con marca propia, y usado por ambos sexos. Con su letra pequeña.</p>
             <div class="card__meta"><span class="badge">Aprobado (un uso)</span><span class="badge badge--accent">Receta</span></div>
           </a>
 
-          <a class="card card--link" href="articulos/melanotan-2.html">
+          <a class="card card--link" href="articulos/melanotan-2">
             <p class="card__kicker">Bronceado</p>
             <p class="card__title">Melanotan II</p>
             <p class="card__desc">El "péptido del bronceado": por qué funciona de verdad y por qué las autoridades sanitarias llevan años avisando.</p>
             <div class="card__meta"><span class="badge badge--accent">Riesgos notables</span><span class="badge badge--ghost">No aprobado</span></div>
           </a>
 
-          <a class="card card--link" href="articulos/semax.html">
+          <a class="card card--link" href="articulos/semax">
             <p class="card__kicker">Nootrópicos</p>
             <p class="card__title">Semax y Selank</p>
             <p class="card__desc">Los péptidos rusos para foco y ansiedad que allí se recetan a diario, y que aquí casi nadie conoce todavía.</p>
@@ -207,7 +212,7 @@
           <div class="prose mt-2">
             <p>Reconstituir y calcular dosis es la parte que más confunde a quien se acerca al tema. Con los miligramos del vial y el agua que se añade, te mostramos a qué marca equivaldría, en unidades de la jeringa, con un dibujo que se rellena solo. Es una demostración del cálculo, no una indicación de uso.</p>
           </div>
-          <a class="btn btn--accent btn--lg mt-3" href="herramientas/calculadora-reconstitucion.html">Abrir la calculadora</a>
+          <a class="btn btn--accent btn--lg mt-3" href="herramientas/calculadora-reconstitucion">Abrir la calculadora</a>
         </div>
         <figure class="card" style="padding:1.6rem">
           <svg viewBox="0 0 430 124" class="syringe" role="img" aria-label="Ejemplo: jeringa de insulina cargada hasta 5 unidades">
@@ -247,7 +252,7 @@
             <div>
               <h2 class="pledge__title">A favor de la información, no de la imprudencia.</h2>
               <p class="pledge__text">Muchos de estos compuestos son material de investigación no autorizado. Aquí no vendemos nada ni te decimos dónde comprar: te damos contexto, evidencia y advertencias para que cualquier conversación con un profesional sanitario parta de mejor información.</p>
-              <a class="btn btn--accent btn--lg pledge__cta" href="paginas/seguridad-legalidad.html">Seguridad y legalidad</a>
+              <a class="btn btn--accent btn--lg pledge__cta" href="paginas/seguridad-legalidad">Seguridad y legalidad</a>
             </div>
             <ul class="pledge__points">
               <li class="pledge__point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Citamos <b>fuentes fiables</b> y marcamos el nivel de evidencia.</span></li>
@@ -264,7 +269,7 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a class="brand" href="index.html" aria-label="peptidos.app, inicio">
+          <a class="brand" href="/" aria-label="peptidos.app, inicio">
             <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
               <path d="M6 23 L13 17.5 L19.5 19.5 L26 9.5" fill="none" stroke="#6AA0FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
               <circle cx="6" cy="23" r="3.1" fill="#0C1A33" stroke="#6AA0FF" stroke-width="2"/>
@@ -276,9 +281,9 @@
           </a>
           <p class="mt-2" style="font-size:.92rem;max-width:34ch;color:#93a39a">El portal de péptidos explicado para personas normales. Información clara, fuentes fiables y cero humo.</p>
         </div>
-        <div><h4>Péptidos</h4><ul><li><a href="index.html#peptidos">Todos</a></li><li><a href="articulos/bpc-157.html">BPC-157</a></li><li><a href="articulos/retatrutida.html">Retatrutida</a></li><li><a href="articulos/ghk-cu.html">GHK-Cu</a></li></ul></div>
-        <div><h4>Herramientas</h4><ul><li><a href="herramientas/calculadora-reconstitucion.html">Calculadora</a></li><li><a href="paginas/que-son-los-peptidos.html">¿Qué son?</a></li></ul></div>
-        <div><h4>Legal</h4><ul><li><a href="paginas/seguridad-legalidad.html">Seguridad y legalidad</a></li><li><a href="paginas/aviso-legal.html">Aviso legal</a></li><li><a href="paginas/terminos.html">Términos y condiciones</a></li><li><a href="paginas/privacidad.html">Privacidad y cookies</a></li></ul></div>
+        <div><h4>Péptidos</h4><ul><li><a href="/#peptidos">Todos</a></li><li><a href="articulos/bpc-157">BPC-157</a></li><li><a href="articulos/retatrutida">Retatrutida</a></li><li><a href="articulos/ghk-cu">GHK-Cu</a></li></ul></div>
+        <div><h4>Herramientas</h4><ul><li><a href="herramientas/calculadora-reconstitucion">Calculadora</a></li><li><a href="paginas/que-son-los-peptidos">¿Qué son?</a></li></ul></div>
+        <div><h4>Legal</h4><ul><li><a href="paginas/seguridad-legalidad">Seguridad y legalidad</a></li><li><a href="paginas/aviso-legal">Aviso legal</a></li><li><a href="paginas/terminos">Términos y condiciones</a></li><li><a href="paginas/privacidad">Privacidad y cookies</a></li></ul></div>
       </div>
       <p class="footer__legal">peptidos.app es un proyecto exclusivamente divulgativo e informativo. No vende ni distribuye ninguna sustancia, no recomienda su consumo o uso, y no constituye consejo médico, farmacéutico ni veterinario. La información se ofrece con fines educativos y de comprensión general; cualquier decisión corresponde al lector y a los profesionales cualificados. © 2026 peptidos.app.</p>
     </div>

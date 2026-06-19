@@ -323,23 +323,17 @@ h3 { font-size: var(--fs-step-1); }
 .ev-card--weak { --ev: var(--accent); background: var(--accent-50); border-color: #F3CABB; }
 .ev-card--weak .card__kicker { color: var(--accent-600); }
 
-/* --- Tarjeta de acceso rapido (herramienta) ------------------------------*/
-.toolcard { display: flex; align-items: center; gap: clamp(1rem, 3vw, 1.5rem);
-  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg);
-  padding: 1.05rem 1.25rem; text-decoration: none; color: inherit; box-shadow: var(--shadow-sm);
-  transition: transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s var(--ease); }
-.toolcard:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: #c9d3e4; }
-.toolcard__icon { flex: 0 0 auto; width: 92px; height: 58px; display: grid; place-items: center;
-  background: var(--brand-50); border: 1px solid #cbd8f2; border-radius: var(--r); }
-.toolcard__icon svg { width: 74px; height: auto; }
-.toolcard__body { flex: 1 1 auto; min-width: 0; }
-.toolcard__kicker { display: block; font-size: var(--fs-step--1); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--brand-700); }
-.toolcard__title { display: block; font-family: var(--font-display); font-size: 1.25rem; font-weight: 560; color: var(--ink); margin-top: .1rem; }
-.toolcard__sub { display: block; color: var(--muted); font-size: .95rem; margin-top: .2rem; }
-.toolcard__cta { flex: 0 0 auto; display: inline-flex; align-items: center; gap: .45rem; font-weight: 600; color: var(--brand-700); white-space: nowrap; }
-.toolcard__cta svg { transition: transform .2s var(--ease); }
-.toolcard:hover .toolcard__cta svg { transform: translateX(3px); }
-@media (max-width: 640px) { .toolcard { flex-wrap: wrap; } .toolcard__icon { width: 64px; height: 46px; } .toolcard__icon svg { width: 52px; } .toolcard__cta { width: 100%; justify-content: flex-start; } }
+/* --- Hero a dos columnas + panel de herramienta --------------------------*/
+.hero__grid { display: grid; gap: clamp(1.75rem, 4vw, 3rem); align-items: center; }
+@media (min-width: 920px) { .hero__grid { grid-template-columns: 1.2fr .8fr; } }
+.toolpanel { display: block; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 1.4rem; box-shadow: var(--shadow); text-decoration: none; color: inherit; transition: transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s var(--ease); }
+.toolpanel:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: #c9d3e4; }
+.toolpanel__art { background: var(--brand-50); border: 1px solid #cbd8f2; border-radius: var(--r); padding: 1.3rem 1.1rem; display: grid; place-items: center; }
+.toolpanel__art svg { width: 100%; max-width: 240px; height: auto; }
+.toolpanel__kicker { display: block; margin-top: 1.1rem; font-size: var(--fs-step--1); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--brand-700); }
+.toolpanel__title { display: block; font-family: var(--font-display); font-size: 1.3rem; font-weight: 560; color: var(--ink); margin-top: .25rem; }
+.toolpanel__sub { display: block; color: var(--muted); font-size: .95rem; margin-top: .35rem; line-height: 1.5; }
+.toolpanel__btn { display: flex; width: 100%; justify-content: center; margin-top: 1.1rem; }
 
 /* --- Banda de compromiso (postura editorial) -----------------------------*/
 .pledge { position: relative; overflow: hidden; background: var(--ink); color: #aebccd;
@@ -373,3 +367,5 @@ h3 { font-size: var(--fs-step-1); }
 .cookie-banner__text a { color: var(--brand-700); font-weight: 550; }
 .cookie-banner__actions { display: flex; gap: .5rem; margin-top: .75rem; }
 .cookie-banner .btn { flex: 1; padding: .5rem .8rem; font-size: .85rem; min-height: 36px; }
+
+.center { text-align: center; }
