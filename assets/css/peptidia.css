@@ -294,7 +294,8 @@ h3 { font-size: var(--fs-step-1); }
 .footer { background: var(--ink); color: #cdd8d1; padding-block: clamp(2.5rem, 6vw, 4rem); margin-top: 4rem; }
 .footer a { color: #cdd8d1; text-decoration: none; }
 .footer a:hover { color: #fff; }
-.footer__grid { display: grid; gap: 2rem; grid-template-columns: 1.5fr repeat(auto-fit, minmax(140px, 1fr)); }
+.footer__grid { display: grid; gap: 2rem 2.5rem; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .footer__grid { grid-template-columns: repeat(3, 1fr); } .footer__brand { grid-column: 1 / -1; } }
 .footer h4 { color: #fff; font-family: var(--font-sans); font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: .8rem; }
 .footer ul { list-style: none; padding: 0; display: grid; gap: .5rem; font-size: .94rem; }
 .footer__brand .brand__name { color: #fff; } .footer__brand .brand__name b { color: var(--brand-300); }
