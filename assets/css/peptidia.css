@@ -186,8 +186,7 @@ h3 { font-size: var(--fs-step-1); }
 .prose { max-width: var(--w-read); }
 .prose > * + * { margin-top: 1.15rem; }
 .prose p, .prose li { font-size: var(--fs-step-0); line-height: 1.75; color: var(--ink-soft); }
-.prose p { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
-@media (max-width: 560px) { .prose p { text-align: left; } } /* evita ríos en móvil estrecho */
+.prose p, .lede, .callout p, .card__desc, .footer__legal { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
 .prose h2 { margin-top: 2.6rem; font-size: var(--fs-step-2); scroll-margin-top: 6rem; }
 .prose h3 { margin-top: 1.8rem; font-size: var(--fs-step-1); scroll-margin-top: 6rem; }
 .prose ul, .prose ol { padding-left: 1.3rem; }
