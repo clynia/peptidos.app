@@ -323,6 +323,38 @@ h3 { font-size: var(--fs-step-1); }
 .ev-card--weak { --ev: var(--accent); background: var(--accent-50); border-color: #F3CABB; }
 .ev-card--weak .card__kicker { color: var(--accent-600); }
 
+/* --- Tarjeta de acceso rapido (herramienta) ------------------------------*/
+.toolcard { display: flex; align-items: center; gap: clamp(1rem, 3vw, 1.5rem);
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg);
+  padding: 1.05rem 1.25rem; text-decoration: none; color: inherit; box-shadow: var(--shadow-sm);
+  transition: transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s var(--ease); }
+.toolcard:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: #c9d3e4; }
+.toolcard__icon { flex: 0 0 auto; width: 92px; height: 58px; display: grid; place-items: center;
+  background: var(--brand-50); border: 1px solid #cbd8f2; border-radius: var(--r); }
+.toolcard__icon svg { width: 74px; height: auto; }
+.toolcard__body { flex: 1 1 auto; min-width: 0; }
+.toolcard__kicker { display: block; font-size: var(--fs-step--1); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--brand-700); }
+.toolcard__title { display: block; font-family: var(--font-display); font-size: 1.25rem; font-weight: 560; color: var(--ink); margin-top: .1rem; }
+.toolcard__sub { display: block; color: var(--muted); font-size: .95rem; margin-top: .2rem; }
+.toolcard__cta { flex: 0 0 auto; display: inline-flex; align-items: center; gap: .45rem; font-weight: 600; color: var(--brand-700); white-space: nowrap; }
+.toolcard__cta svg { transition: transform .2s var(--ease); }
+.toolcard:hover .toolcard__cta svg { transform: translateX(3px); }
+@media (max-width: 640px) { .toolcard { flex-wrap: wrap; } .toolcard__icon { width: 64px; height: 46px; } .toolcard__icon svg { width: 52px; } .toolcard__cta { width: 100%; justify-content: flex-start; } }
+
+/* --- Banda de compromiso (postura editorial) -----------------------------*/
+.pledge { position: relative; overflow: hidden; background: var(--ink); color: #aebccd;
+  border-radius: var(--r-lg); padding: clamp(1.6rem, 4.5vw, 2.8rem); box-shadow: var(--shadow); }
+.pledge__sig { position: absolute; right: -1%; bottom: -22%; width: min(300px, 40%); height: auto; opacity: .10; pointer-events: none; }
+.pledge__grid { position: relative; z-index: 1; display: grid; gap: 1.4rem 2.6rem; align-items: center; }
+@media (min-width: 820px) { .pledge__grid { grid-template-columns: 1.1fr .9fr; } }
+.pledge__title { font-family: var(--font-display); color: #fff; font-size: clamp(1.5rem, 3.3vw, 2.1rem); line-height: 1.12; font-weight: 560; letter-spacing: -.01em; }
+.pledge__text { color: #9fb0c4; margin-top: .9rem; font-size: 1rem; line-height: 1.6; max-width: 48ch; text-align: left; }
+.pledge__cta { margin-top: 1.3rem; }
+.pledge__points { list-style: none; padding: 0; margin: 0; display: grid; gap: .8rem; }
+.pledge__point { display: flex; gap: .7rem; align-items: flex-start; font-size: .98rem; color: #cdd8e6; }
+.pledge__point svg { flex: 0 0 auto; width: 21px; height: 21px; color: var(--brand-300); margin-top: .02rem; }
+.pledge__point b { color: #fff; font-weight: 600; }
+
 /* --- Aviso de cookies (discreto, esquina inferior) -----------------------*/
 .cookie-banner {
   position: fixed; z-index: 60;
