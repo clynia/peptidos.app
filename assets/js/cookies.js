@@ -23,7 +23,7 @@
   el.innerHTML =
     '<div class="cookie-banner__text">' +
       '<span class="cookie-banner__label">Cookies</span>' +
-      '<p>Usamos solo cookies técnicas necesarias para que la web funcione. No hay rastreo ni publicidad. Si algún día añadimos analítica, te lo pediremos antes. <a href="' + policyHref() + '">Más información</a>.</p>' +
+      '<p>Solo usamos cookies técnicas, sin rastreo ni publicidad. <a href="' + policyHref() + '">Más información</a>.</p>' +
     '</div>' +
     '<div class="cookie-banner__actions">' +
       '<button type="button" class="btn btn--ghost" data-cc="reject">Rechazar</button>' +
