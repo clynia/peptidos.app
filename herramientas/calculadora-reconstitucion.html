@@ -59,16 +59,11 @@
   </header>
 
   <main>
-    <section class="section container" style="padding-bottom:1.5rem">
-      <h1 style="max-width:18ch">Calculadora de reconstitución: de los mg del vial a las UI de la jeringa</h1>
-      <p class="lede measure mt-2">Reconstituir suena a química de bata blanca, pero es una regla de tres. Con dos números (los miligramos del vial y el agua que se añade) te mostramos a cuántas unidades (UI) de la jeringa <strong>equivaldría</strong> esa dosis, con dibujo incluido. Es una demostración educativa del cálculo.</p>
-    </section>
-
-    <section class="container" style="padding-bottom:3rem">
-      <div class="callout callout--info" style="margin-bottom:1.5rem">
-        <span class="callout__label">Herramienta divulgativa</span>
-        <p>Esto ilustra la aritmética de una reconstitución con fines educativos. No es una indicación de uso, ni una recomendación de dosis, ni una invitación a administrar nada.</p>
-      </div>
+    <section class="container" style="padding-block: clamp(1.4rem, 4vw, 2.4rem) 2.5rem">
+      <header style="max-width:44ch;margin-bottom:1.6rem">
+        <h1>Calculadora de reconstitución</h1>
+        <p class="lede mt-2">Pon los miligramos del vial y el agua, y te decimos a cuántas <strong>unidades (UI)</strong> de la jeringa equivale la dosis, con dibujo de la jeringuilla.</p>
+      </header>
       <div class="calc">
         <!-- Panel de entrada -->
         <form class="calc__panel" autocomplete="off" onsubmit="return false">
@@ -184,12 +179,9 @@
     <!-- Seguridad -->
     <section class="section section--alt">
       <div class="container measure" style="margin-inline:auto">
-        <div class="callout callout--warn">
-          <span class="callout__label">
-            <svg class="callout__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Antes de fiarte de un número
-          </span>
-          <p style="font-size:.97rem">Esta herramienta solo hace una conversión de unidades, con fines educativos. No decide si un compuesto es adecuado, ni qué cantidad es segura, ni si es legal donde vives. Muchos de estos compuestos son material de investigación no autorizado. peptidos.app no promueve su consumo ni su uso: aquí solo explicamos cómo funcionaría la aritmética, igual que lo haría un libro de texto.</p>
+        <div class="callout callout--info">
+          <span class="callout__label">Herramienta divulgativa</span>
+          <p style="font-size:.97rem">Esto solo ilustra la aritmética de una reconstitución, con fines educativos. No es una indicación de uso, ni una recomendación de dosis, ni una invitación a administrar nada: no decide si un compuesto es adecuado, ni qué cantidad es segura, ni si es legal donde vives. Muchos de estos compuestos son material de investigación no autorizado, y peptidos.app no promueve su consumo ni su uso.</p>
         </div>
       </div>
     </section>
