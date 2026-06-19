@@ -203,7 +203,7 @@ h3 { font-size: var(--fs-step-1); }
 
 /* --- Layout de artículo con índice ---------------------------------------*/
 .article { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
-@media (min-width: 1040px) { .article { grid-template-columns: 240px minmax(0,1fr); } }
+@media (min-width: 1040px) { .article { grid-template-columns: minmax(0,1fr) 240px; } .article .toc { order: 2; } }
 .toc { position: sticky; top: 6rem; align-self: start; font-size: .92rem; }
 .toc__title { font-size: var(--fs-step--1); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .7rem; }
 .toc a { display: block; padding: .35rem .6rem; border-radius: var(--r-sm); color: var(--ink-soft); text-decoration: none; border-left: 2px solid transparent; }
@@ -309,6 +309,19 @@ h3 { font-size: var(--fs-step-1); }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .mt-0{margin-top:0} .mt-1{margin-top:.5rem} .mt-2{margin-top:1rem} .mt-3{margin-top:1.5rem} .mt-4{margin-top:2.5rem}
 .flex{display:flex} .wrap{flex-wrap:wrap} .gap-1{gap:.5rem} .gap-2{gap:1rem} .items-center{align-items:center}
+
+/* --- Niveles de evidencia (escala de color) ------------------------------*/
+.ev-card { border-radius: var(--r-lg); border: 1px solid var(--line); }
+.ev-card__meter { display: flex; gap: 5px; margin-bottom: .7rem; }
+.ev-card__meter i { width: 26px; height: 6px; border-radius: 999px; background: var(--ev, var(--brand)); opacity: .2; }
+.ev-card__meter i.on { opacity: 1; }
+.ev-card .card__kicker { font-weight: 700; }
+.ev-card--strong { --ev: var(--brand); background: var(--brand-50); border-color: #CBD8F2; }
+.ev-card--strong .card__kicker { color: var(--brand-700); }
+.ev-card--mid { --ev: #C8932E; background: #F8EFD8; border-color: #ECD9A8; }
+.ev-card--mid .card__kicker { color: #8A6512; }
+.ev-card--weak { --ev: var(--accent); background: var(--accent-50); border-color: #F3CABB; }
+.ev-card--weak .card__kicker { color: var(--accent-600); }
 
 /* --- Aviso de cookies (discreto, esquina inferior) -----------------------*/
 .cookie-banner {
