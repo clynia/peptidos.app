@@ -1,0 +1,8 @@
+# Datos internos de investigación (no forman parte de la web publicada)
+_research/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log

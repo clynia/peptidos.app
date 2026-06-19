@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora de reconstitución de péptidos | Dosis en UI paso a paso · peptidos.app</title>
+  <meta name="description" content="Calcula en segundos cuántas unidades (UI) cargar en la jeringa. Pon los mg del vial y el agua que vas a añadir, y te decimos la dosis exacta con un dibujo de la jeringuilla. Explicado para principiantes." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://peptidos.app/herramientas/calculadora-reconstitucion" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Calculadora de reconstitución de péptidos · peptidos.app" />
+  <meta property="og:description" content="Mete los mg del vial y el agua, y te damos la dosis en UI con un dibujo de la jeringuilla. Sin líos de matemáticas." />
+  <meta property="og:locale" content="es_ES" />
+  <link rel="icon" href="../assets/logos/peptidia-mark.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/peptidia.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora de reconstitución de péptidos",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "description": "Herramienta divulgativa que ilustra cómo se calcula una reconstitución: convierte los mg de un vial y el agua añadida en su equivalencia en unidades (UI) de una jeringa de insulina, con representación visual.",
+    "isAccessibleForFree": true,
+    "publisher": { "@type": "Organization", "name": "peptidos.app" }
+  }
+  </script>
+</head>
+<body>
+  <div class="medbar">Web divulgativa, solo información. <b>No promovemos el consumo ni el uso de ninguna sustancia</b>, ni damos consejo médico, farmacéutico o veterinario.</div>
+
+  <header class="nav" aria-label="Principal">
+    <input type="checkbox" id="navToggle" class="nav__check visually-hidden" />
+    <div class="nav__inner">
+      <a class="brand" href="../index.html" aria-label="peptidos.app, inicio">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M6 23 L13 17.5 L19.5 19.5 L26 9.5" fill="none" stroke="#163E97" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="6" cy="23" r="3.1" fill="#F6F8FC" stroke="#1B50C4" stroke-width="2"/>
+          <circle cx="13" cy="17.5" r="3.1" fill="#F6F8FC" stroke="#1B50C4" stroke-width="2"/>
+          <circle cx="19.5" cy="19.5" r="3.1" fill="#F6F8FC" stroke="#1B50C4" stroke-width="2"/>
+          <circle cx="26" cy="9.5" r="4" fill="#1B50C4"/>
+          <circle cx="24.6" cy="8.1" r="1.15" fill="#6AA0FF"/>
+        </svg>
+        <span class="brand__name">peptidos<b>.app</b></span>
+      </a>
+      <nav class="nav__links">
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html#peptidos">Péptidos</a>
+        <a href="../paginas/que-son-los-peptidos.html">¿Qué son?</a>
+        <a href="calculadora-reconstitucion.html" aria-current="page">Calculadora</a>
+        <a href="../paginas/seguridad-legalidad.html">Seguridad</a>
+      </nav>
+      <label for="navToggle" class="btn btn--ghost nav__toggle" aria-label="Abrir menú">Menú</label>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container" style="padding-bottom:1.5rem">
+      <p class="eyebrow">Herramienta gratuita</p>
+      <h1 style="max-width:18ch">Calculadora de reconstitución: de los mg del vial a las UI de la jeringa</h1>
+      <p class="lede measure mt-2">Reconstituir suena a química de bata blanca, pero es una regla de tres. Con dos números (los miligramos del vial y el agua que se añade) te mostramos a cuántas unidades (UI) de la jeringa <strong>equivaldría</strong> esa dosis, con dibujo incluido. Es una demostración educativa del cálculo.</p>
+    </section>
+
+    <section class="container" style="padding-bottom:3rem">
+      <div class="callout callout--info" style="margin-bottom:1.5rem">
+        <span class="callout__label">Herramienta divulgativa</span>
+        <p>Esto ilustra la aritmética de una reconstitución con fines educativos. No es una indicación de uso, ni una recomendación de dosis, ni una invitación a administrar nada.</p>
+      </div>
+      <div class="calc">
+        <!-- Panel de entrada -->
+        <form class="calc__panel" autocomplete="off" onsubmit="return false">
+          <div class="calc__field">
+            <label class="calc__label" for="vial">1. ¿Cuántos mg trae el vial? <small>lo pone en la etiqueta</small></label>
+            <div class="input-group">
+              <input id="vial" type="number" inputmode="decimal" min="0" step="any" value="10" aria-describedby="vial-help" />
+              <span class="input-group__unit">mg</span>
+            </div>
+            <p id="vial-help" class="muted" style="font-size:.84rem;margin-top:.35rem">Es el polvo liofilizado que viene seco dentro del frasco.</p>
+          </div>
+
+          <div class="calc__field">
+            <label class="calc__label" for="water">2. ¿Cuánta agua bacteriostática le añades? <small>tú decides</small></label>
+            <div class="input-group">
+              <input id="water" type="number" inputmode="decimal" min="0" step="any" value="2" aria-describedby="water-help" />
+              <span class="input-group__unit">mL</span>
+            </div>
+            <p id="water-help" class="muted" style="font-size:.84rem;margin-top:.35rem">Más agua = dosis más diluida = más rayitas por dosis (más fácil de medir).</p>
+          </div>
+
+          <div class="calc__field">
+            <label class="calc__label" for="dose">3. Dosis de ejemplo</label>
+            <div class="flex gap-2 wrap items-center">
+              <div class="input-group" style="flex:1">
+                <input id="dose" type="number" inputmode="decimal" min="0" step="any" value="250" />
+                <span class="input-group__unit" id="dose-unit-label">mcg</span>
+              </div>
+              <div class="seg" role="group" aria-label="Unidad de la dosis">
+                <button type="button" data-unit="mcg" aria-pressed="true">mcg</button>
+                <button type="button" data-unit="mg" aria-pressed="false">mg</button>
+              </div>
+            </div>
+            <p class="muted" style="font-size:.84rem;margin-top:.35rem">1 mg = 1000 mcg. Si la cifra está en microgramos, usa mcg.</p>
+          </div>
+
+          <div class="calc__field">
+            <label class="calc__label" for="syringe">4. Tipo de jeringa de insulina</label>
+            <select id="syringe">
+              <option value="100">1 mL · 100 UI (la más común)</option>
+              <option value="50">0,5 mL · 50 UI</option>
+              <option value="30">0,3 mL · 30 UI</option>
+            </select>
+          </div>
+        </form>
+
+        <!-- Panel de resultado -->
+        <div>
+          <div class="result" role="status" aria-live="polite">
+            <p style="font-size:.9rem;color:#CFE0FF;font-weight:600;margin-bottom:.4rem">Esa dosis equivaldría a:</p>
+            <div class="result__big">
+              <span class="result__num" id="r-units">5</span>
+              <span class="result__unit">UI (unidades)</span>
+            </div>
+            <div class="mt-3">
+              <div class="result__row"><span>Volumen a extraer</span><b id="r-volume">0,05 mL</b></div>
+              <div class="result__row"><span>Concentración</span><b><span id="r-conc">5 mg/mL</span> <span id="r-conc-mcg" style="color:#CFE0FF;font-weight:500"></span></b></div>
+              <div class="result__row"><span>Dosis por vial</span><b id="r-pervial">40 dosis</b></div>
+            </div>
+            <p class="result__hint" id="r-hint"></p>
+          </div>
+
+          <div class="callout callout--danger calc__error" id="calc-error" role="alert" style="margin-top:1rem">
+            <span class="callout__label">No cabe en esta jeringa</span>
+            <p id="calc-error-text" style="font-size:.95rem"></p>
+          </div>
+
+          <figure class="syringe-wrap">
+            <div id="syringe-svg"></div>
+            <figcaption id="syringe-cap">Jeringa de insulina de 1 mL (100 UI). Llena hasta la marca coral.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explicación para principiantes -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="measure" style="margin-inline:auto">
+          <p class="eyebrow center">Explícamelo como si tuviera 5 años</p>
+          <h2 class="center" style="margin-bottom:1.5rem">¿Qué es "reconstituir" y por qué hay matemáticas?</h2>
+          <div class="callout callout--eli5">
+            <span class="callout__label">
+              <svg class="callout__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v3m0 12v3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M3 12h3m12 0h3" stroke-linecap="round"/></svg>
+              La idea en una frase
+            </span>
+            <p>El péptido viene como un polvo seco. Le añades agua para volverlo líquido (eso es "reconstituir"). Cuanta más agua eches, más repartido queda el polvo, y por eso la misma dosis ocupa más rayitas en la jeringa.</p>
+          </div>
+          <div class="prose mt-3">
+            <p>Piensa en un sobre de café soluble. Si lo disuelves en media taza, cada sorbo va cargado. Si lo disuelves en dos tazas, cada sorbo es más suave, y necesitas más sorbos para tomarte la misma cantidad de café. El péptido funciona igual: el polvo es el café y el agua bacteriostática es, bueno, el agua. La cantidad de péptido no cambia, solo cambia en cuánto líquido lo repartes.</p>
+            <p>La jeringa de insulina no mide miligramos: mide <strong>unidades (UI)</strong>, que son rayitas. Una jeringa de 1 mL tiene 100 rayitas. La calculadora hace la conversión por ti: traduce "250 microgramos" en "la rayita número 5". Sin reglas de tres mentales, sin redondeos a ojo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo lo calcula -->
+    <section class="section">
+      <div class="container measure" style="margin-inline:auto">
+        <h2>La cuenta exacta, por si eres curioso</h2>
+        <p class="muted mt-1">Tres pasos, los mismos que hace la herramienta:</p>
+        <div class="grid grid-3 mt-3">
+          <div class="card"><p class="card__kicker">Paso 1</p><p class="card__title">Concentración</p><p class="card__desc">mg del vial × 1000 ÷ mL de agua = microgramos por mL.</p></div>
+          <div class="card"><p class="card__kicker">Paso 2</p><p class="card__title">Volumen</p><p class="card__desc">dosis en mcg ÷ concentración = mL que hay que extraer.</p></div>
+          <div class="card"><p class="card__kicker">Paso 3</p><p class="card__title">Unidades</p><p class="card__desc">mL × 100 = unidades (UI) en la jeringa U-100.</p></div>
+        </div>
+        <div class="callout callout--info mt-3">
+          <span class="callout__label">Ejemplo resuelto</span>
+          <p>Vial de 10 mg + 2 mL de agua = 5 mg/mL (5000 mcg/mL). Para una dosis de 250 mcg: 250 ÷ 5000 = 0,05 mL, que son <strong>5 UI</strong>. Y de ese vial salen 40 dosis. Justo lo que ves arriba.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seguridad -->
+    <section class="section section--alt">
+      <div class="container measure" style="margin-inline:auto">
+        <div class="callout callout--warn">
+          <span class="callout__label">
+            <svg class="callout__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Antes de fiarte de un número
+          </span>
+          <p style="font-size:.97rem">Esta herramienta solo hace una conversión de unidades, con fines educativos. No decide si un compuesto es adecuado, ni qué cantidad es segura, ni si es legal donde vives. Muchos de estos compuestos son material de investigación no autorizado. peptidos.app no promueve su consumo ni su uso: aquí solo explicamos cómo funcionaría la aritmética, igual que lo haría un libro de texto.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="../index.html" aria-label="peptidos.app, inicio">
+            <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+              <path d="M6 23 L13 17.5 L19.5 19.5 L26 9.5" fill="none" stroke="#6AA0FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="6" cy="23" r="3.1" fill="#0C1A33" stroke="#6AA0FF" stroke-width="2"/>
+              <circle cx="13" cy="17.5" r="3.1" fill="#0C1A33" stroke="#6AA0FF" stroke-width="2"/>
+              <circle cx="19.5" cy="19.5" r="3.1" fill="#0C1A33" stroke="#6AA0FF" stroke-width="2"/>
+              <circle cx="26" cy="9.5" r="4" fill="#6AA0FF"/>
+            </svg>
+            <span class="brand__name">peptidos<b>.app</b></span>
+          </a>
+          <p class="mt-2" style="font-size:.92rem;max-width:34ch;color:#93a39a">El portal de péptidos explicado para personas normales. Información clara, fuentes fiables y cero humo.</p>
+        </div>
+        <div><h4>Péptidos</h4><ul><li><a href="../index.html#peptidos">Todos</a></li><li><a href="#">BPC-157</a></li><li><a href="#">Retatrutida</a></li><li><a href="#">GHK-Cu</a></li></ul></div>
+        <div><h4>Herramientas</h4><ul><li><a href="calculadora-reconstitucion.html">Calculadora</a></li><li><a href="../paginas/que-son-los-peptidos.html">¿Qué son?</a></li></ul></div>
+        <div><h4>Legal</h4><ul><li><a href="../paginas/seguridad-legalidad.html">Seguridad y legalidad</a></li><li><a href="../paginas/aviso-legal.html">Aviso legal</a></li><li><a href="../paginas/terminos.html">Términos</a></li><li><a href="../paginas/privacidad.html">Privacidad y cookies</a></li></ul></div>
+      </div>
+      <p class="footer__legal">peptidos.app es un proyecto exclusivamente divulgativo e informativo. No vende ni distribuye ninguna sustancia, no recomienda su consumo o uso, y no constituye consejo médico, farmacéutico ni veterinario. La información se ofrece con fines educativos y de comprensión general; cualquier decisión corresponde al lector y a los profesionales cualificados. © 2026 peptidos.app.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/calculadora.js?v=3"></script>
+</body>
+</html>

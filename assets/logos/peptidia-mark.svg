@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="peptidos.app">
+  <title>peptidos.app</title>
+  <!-- Cadena de aminoácidos ascendente: confianza + vitalidad -->
+  <path d="M6 23 L13 17.5 L19.5 19.5 L26 9.5"
+        fill="none" stroke="#163E97" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="6"  cy="23"   r="3.1" fill="#F6F8FC" stroke="#1B50C4" stroke-width="2"/>
+  <circle cx="13" cy="17.5" r="3.1" fill="#F6F8FC" stroke="#1B50C4" stroke-width="2"/>
+  <circle cx="19.5" cy="19.5" r="3.1" fill="#F6F8FC" stroke="#1B50C4" stroke-width="2"/>
+  <!-- Nodo final activo + gota (reconstitución) -->
+  <circle cx="26" cy="9.5" r="4" fill="#1B50C4"/>
+  <circle cx="24.6" cy="8.1" r="1.15" fill="#6AA0FF"/>
+</svg>
