@@ -30,6 +30,7 @@
     var s = (r % 1 === 0) ? String(r) : r.toFixed(dec).replace(/0+$/, '').replace(/\.$/, '');
     return s.replace('.', ','); // decimal español
   }
+  function num(v) { return parseFloat(String(v).replace(',', '.')); } // acepta coma o punto
 
   var SYR = {
     '30':  { max: 30,  labelStep: 10, minorStep: 5,  ml: '0,3 mL' },
@@ -104,9 +105,9 @@
 
   /* ---- cálculo ---- */
   function compute() {
-    var vialMg = parseFloat(els.vial.value);
-    var waterMl = parseFloat(els.water.value);
-    var doseVal = parseFloat(els.dose.value);
+    var vialMg = num(els.vial.value);
+    var waterMl = num(els.water.value);
+    var doseVal = num(els.dose.value);
     var maxUnits = parseInt(els.syringe.value, 10);
 
     if (!(vialMg > 0) || !(waterMl > 0) || !(doseVal > 0)) {

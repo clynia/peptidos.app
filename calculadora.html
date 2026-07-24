@@ -70,7 +70,7 @@
           <div class="calc__field">
             <label class="calc__label" for="vial">1. ¿Cuántos mg trae el vial? <small>lo pone en la etiqueta</small></label>
             <div class="input-group">
-              <input id="vial" type="number" inputmode="decimal" min="0" step="any" value="10" aria-describedby="vial-help" />
+              <input id="vial" type="text" inputmode="decimal" value="10" aria-describedby="vial-help" />
               <span class="input-group__unit">mg</span>
             </div>
             <p id="vial-help" class="muted" style="font-size:.84rem;margin-top:.35rem">Es el polvo liofilizado que viene seco dentro del frasco.</p>
@@ -79,17 +79,17 @@
           <div class="calc__field">
             <label class="calc__label" for="water">2. ¿Cuánta agua bacteriostática le añades? <small>tú decides</small></label>
             <div class="input-group">
-              <input id="water" type="number" inputmode="decimal" min="0" step="any" value="2" aria-describedby="water-help" />
+              <input id="water" type="text" inputmode="decimal" value="2" aria-describedby="water-help" />
               <span class="input-group__unit">mL</span>
             </div>
-            <p id="water-help" class="muted" style="font-size:.84rem;margin-top:.35rem">Más agua = dosis más diluida = más rayitas por dosis (más fácil de medir).</p>
+            <p id="water-help" class="muted" style="font-size:.84rem;margin-top:.35rem">Más agua = dosis más diluida = más rayitas por dosis (más fácil de medir). Admite decimales, con coma o punto.</p>
           </div>
 
           <div class="calc__field">
             <label class="calc__label" for="dose">3. Dosis de ejemplo</label>
             <div class="flex gap-2 wrap items-center">
               <div class="input-group" style="flex:1">
-                <input id="dose" type="number" inputmode="decimal" min="0" step="any" value="250" />
+                <input id="dose" type="text" inputmode="decimal" value="250" />
                 <span class="input-group__unit" id="dose-unit-label">mcg</span>
               </div>
               <div class="seg" role="group" aria-label="Unidad de la dosis">
@@ -211,7 +211,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/calculadora.js?v=4"></script>
+  <script src="assets/js/calculadora.js?v=5"></script>
   <script src="assets/js/cookies.js" defer></script>
 </body>
 </html>
