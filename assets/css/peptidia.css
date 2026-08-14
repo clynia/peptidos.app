@@ -349,6 +349,18 @@ h3 { font-size: var(--fs-step-1); }
 .pledge__point svg { flex: 0 0 auto; width: 21px; height: 21px; color: var(--brand-300); margin-top: .02rem; }
 .pledge__point b { color: #fff; font-weight: 600; }
 
+/* --- Página no encontrada (404) ------------------------------------------*/
+.nf__code {
+  font-family: var(--font-display); font-weight: 600; line-height: .9;
+  font-size: clamp(4.5rem, 13vw, 8rem); letter-spacing: -.04em;
+  color: var(--brand); opacity: .2; margin-bottom: -.1em;
+}
+.nf h1 { max-width: 18ch; }
+.nf .lede { max-width: 50ch; margin-top: 1rem; }
+.nf__figure { padding: 1.6rem; }
+.nf__figure figcaption { font-size: .88rem; color: var(--muted); text-align: center; margin-top: 1rem; }
+.nf__grid { display: grid; gap: clamp(1rem, 2.5vw, 1.75rem); grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+
 /* --- Aviso de cookies (discreto, esquina inferior) -----------------------*/
 .cookie-banner {
   position: fixed; z-index: 60;

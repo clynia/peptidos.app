@@ -1,3 +1,6 @@
+# Página de error 404 con el diseño de la web
+ErrorDocument 404 /404.html
+
 # URLs limpias (sin .html) para servidores Apache (p. ej. Hostinger)
 RewriteEngine On
 
